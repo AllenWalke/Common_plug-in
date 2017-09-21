@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>原生js随机位置出现笑脸图片代码 - 站长素材</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+</head>
+
+<body>
+	<div id="sum">
+		0
+	</div>
+	
+	
+	
+<script type="text/javascript">
+/*  1、网页加载完成，开始笑脸
+	2、网页背景为黑色
+	3、定时器
+	4、创建图片节点，追加到<body>节点
+	5、图片随机大小
+	6、图片随机定位坐标（x，y）
+	7、笑脸显示的范围，跟窗口一样（0，window.innerWidth）
+	8、点击笑脸，笑脸消失
+*/
+//网页加载完成
+window.onload=function()
+{
+	//更改网页背景色
+	document.body.bgColor="white";
+	//定时器:2秒出现一个笑脸
+	window.setInterval("star()",2000);
+}
+
+var sum=0;
+
+
+
+
+//动画主函数
+function star()
+{
+	//创建img节点
+	var imgObj=document.createElement("img");
+	//添加节点属性
+	imgObj.setAttribute("src","images/"+Math.round(Math.random()*5)+".jpg");
+	imgObj.setAttribute("title","小星星");
+
+	
+	//添加width属性。getRandom()随机数函数
+	
+	//创建style属性（行内样式)
+	var x=getRandom(0,window.innerWidth/2*0.8);
+	var y=getRandom(0,window.innerHeight/2*0.6);
+	imgObj.setAttribute("style","position:absolute;left:"+x+"px;top:"+y+"px");
+	//添加onclick事件属性,点击图片消失
+	imgObj.setAttribute("onclick","removeImg(this)")
+	//挂载img节点到<body>下
+	document.body.appendChild(imgObj);
+
+}
+//函数：求函数随机数
+function getRandom(min,max){
+	var random=Math.random()*(max-min)+min;
+	random=Math.floor(random);
+	return random;
+}
+//函数：删除节点
+function removeImg(obj){
+	//document.body.removeChild(obj);
+	sum++;
+	$(obj).fadeOut();
+	document.getElementById('sum').innerHTML = sum;
+}
+</script>
+</head>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#ffffff">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pause { position: absolute; z-index: 10000; bottom: 10px; right: 10px;}
+        .pause a { width:30px; height:30px; background:url(http://mat1.gtimg.com/zj/maxbao/reai/imgs/units-icons.png) 0 0 no-repeat; display:block; background-size: 90px auto;}
+        .pause a.on { -webkit-animation:reverseRotataZ 1.2s linear infinite}
+        .pause a.off { }
+        .pause  span{ color: #fff; font-size: 16px; position:absolute; left:-40px; top:5px; text-shadow:1px 1px 1px #000; letter-spacing:2px; -webkit-transition:all .2s linear; opacity:0; -webkit-transform:translateX(-20px) }
+        .pause  span.z-show { opacity:1; -webkit-transform:translateX(0px)}
+        .coffee-steam-box { -webkit-transform:translate(-40px,-40px)}
+        @-webkit-keyframes reverseRotataZ {
+            0% {
+                -webkit-transform:rotateZ(0deg)
+            }
+            100% {
+                -webkit-transform:rotateZ(-360deg)
+            }
+        }
+        .audio{position: absolute; z-index:10;  visibility: hidden; opacity: 0; left: 0px; top:0px; width: 100px ; height: 30px;}
+    </style>
+</head>
+<body>
+<div class="pause">
+    <a class="on" href="#">
+    </a>
+    <span>开启</span>
+</div>
+<div class="audio">
+    <audio src="china.mp3"  controls="controls" preload="auto" autoplay="autoplay" id="audio" loop></audio>
+</div>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    //一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以
+    document.getElementById('audio').play();
+    //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('audio').play();
+        document.getElementById('video').play(); //视频自动播放
+    }, false);
+</script>
+
+</body>
+</html>

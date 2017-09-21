@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+body {
+    font-family: "微软雅黑", "Arial";
+    font-size: 12px;
+    background: #fff;
+    min-width: 800px;
+}
+
+img {
+    border: 0;
+    display: inline;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1em 0
+}
+
+/**tabs**/
+.wrap{
+    width: 880px;
+    min-height: 575px;
+    border: 1px solid #e8e8e8;
+    margin: 100px auto 0 auto;
+}
+
+.tabPanel {
+    width: 800px;
+    min-height: 490px;
+    margin: 15px auto 0 auto;
+}
+
+.tabPanel>ul {
+    height: 49px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.tabPanel>ul>li {
+    float: left;
+    font-size: 18px;
+    height: 49px;
+    line-height: 48px;
+    width: 118px;
+    text-align: center;
+    cursor: pointer;
+    color: #c1c1c1;
+    text-shadow: 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: #f8f9fb;
+    font-weight: bold;
+}
+
+.tabPanel .hit {
+    border: 1px solid #e8e8e8;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    color: black;
+    text-shadow: 0 1px 0 #fff;
+    background-color: white;
+}
+
+.pane {
+    min-height: 100px;
+    background-color: #fff;
+    display: none;
+}
+
+.pane>p {
+    margin: 30px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.message{
+    width: 100%;
+    height: 275px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.message > ul > li{
+    width: 100%;
+    height: 75px;
+    margin-bottom:18px;
+}
+
+.report{
+    width: 715px;
+    height: 75px;
+    border: 1px solid #e8e8e8;
+    display: inline-block;
+    background-color: #fafafa;
+}
+
+.del{
+    border: 1px solid #e8e8e8;
+    width: 70px;
+    height: 75px;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.none{
+    display: none;
+}
+
+.report>p{
+    font-size: 16px;
+    color: #c1c1c1;
+    margin: 10px 0 0 10px;
+}
+
+.more{
+    display: block;
+    color: black;
+    margin: 10px 0 0 25px;
+    font-size: 16px;
+}
+
+.seemore,.seemore2{
+    width: 715px;
+    height: 50px;
+    border: 1px solid #e8e8e8;
+    background-color: #efefef;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin-top: 45px;
+    display: none;
+}

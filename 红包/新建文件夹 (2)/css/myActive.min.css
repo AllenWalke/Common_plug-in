@@ -1,0 +1,596 @@
+@charset "utf-8";
+#myActContainer #showActiveTable .faiTableWrap .column1 {
+	padding-left:80px;
+	width:200px
+}
+#myActContainer #showActiveTable .faiTableWrap .column2 {
+	width:100px
+}
+#myActContainer #showActiveTable .faiTableWrap .column8 {
+	width:200px
+}
+#myActContainer #showActiveTable .faiTableWrap .column3 {
+	width:180px;
+	line-height:21px
+}
+#myActContainer #showActiveTable .faiTableWrap .column4 {
+	width:120px
+}
+#myActContainer #showActiveTable .faiTableWrap .column5 {
+	width:100px
+}
+#myActContainer #showActiveTable .faiTableWrap .column6 {
+	width:100px
+}
+#myActContainer #showActiveTable .faiTableWrap .column7 {
+	padding-right:30px;
+	width:200px;
+	min-width:180px
+}
+#prizeContainer #showActiveTable .faiTableWrap .column1 {
+	width:30px
+}
+#prizeContainer .faiTableWrap .column1 {
+	width:10%
+}
+#myActContainer #showRecycleTable .faiTableWrap .column1 {
+	padding-left:50px;
+	width:180px
+}
+#myActContainer #showRecycleTable .faiTableWrap .column2 {
+	width:150px
+}
+#myActContainer #showRecycleTable .faiTableWrap .column3 {
+	width:200px;
+	line-height:21px
+}
+#myActContainer #showRecycleTable .faiTableWrap .column4 {
+	width:180px
+}
+#myActContainer #showRecycleTable .faiTableWrap .column5 {
+	width:200px
+}
+#myActContainer #showRecycleTable .faiTableWrap .column6 {
+	width:180px
+}
+#myActContainer #showRecycleTable .faiTableWrap .column7 {
+	padding-right:30px;
+	width:100px
+}
+#myActContainer .tableContent .qrcodeIcon {
+	display:inline-block;
+	width:38px;
+	height:56px;
+	margin-left:-11px;
+	vertical-align:middle;
+	background-image:url(/image/ermIcon.png?v=201607281150);
+	background-repeat:no-repeat;
+	background-position:11px 21px
+}
+#myActContainer .tableContent .qrcodeIconHover {
+	background-position:11px -72px!important
+}
+#myActContainer .tableContent .qrcodeBox {
+	border:1px solid #cfcfcf;
+	padding:9px 9px 30px 9px;
+	width:145px;
+	height:145px;
+	border-radius:4px;
+	position:absolute;
+	left:35px;
+	margin-top:-10px;
+	z-index:1000;
+	background-color:#fff
+}
+#myActContainer .tableContent .qrcodeBox img {
+	width:100%;
+	height:100%
+}
+#myActContainer .tableContent .qrcodeBox .inIcon {
+	width:9px;
+	height:5px;
+	position:absolute;
+	top:-5px;
+	background-image:url(/image/xssj.png?v=201607281150);
+	background-size:100% 100%
+}
+#myActContainer .tableContent .qrcodeBox .weixinerweima {
+	text-align:center;
+	font-size:12px;
+	color:#666;
+	height:36px
+}
+#myActContainer .tableContent .transition {
+	animation:fadeIn .4s ease 1;
+	-moz-animation:fadeIn .4s ease 1;
+	-webkit-animation:fadeIn .4s ease 1;
+	-o-animation:fadeIn .4s ease 1
+}
+#myActContainer .tableContent .actNum {
+	width:100%;
+	font-size:12px;
+	line-height:18px;
+	color:#fff;
+	background-color:rgba(0,0,0,0.7);
+	position:absolute;
+	bottom:-2px;
+	left:0;
+	text-align:center;
+	z-index:50;
+	display:none
+}
+#myActContainer .tableContent .imgBox {
+	width:72px;
+	height:40px;
+	background:#e6e6e6;
+	display:inline-block;
+	vertical-align:middle;
+	position:relative;
+	margin:3px 0
+}
+#myActContainer .tableContent .textBox {
+	display:inline-block;
+	margin-left:8px;
+	margin-top:1px;
+	vertical-align:middle
+}
+#myActContainer #publishMask,#prizeListMask,#wxCardProgressMask {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	margin:auto;
+	background:rgba(0,0,0,0.7);
+	z-index:1000
+}
+#myActContainer #publishBox,#prizeListBox {
+	width:500px;
+	background:#FFF;
+	margin:180px auto;
+	border-radius:3px;
+	box-sizing:border-box;
+	padding:10px 10px 30px
+}
+#myActContainer #publishBox {
+	width:680px;
+	padding:24px 28px 30px;
+	position:absolute;
+	top:100px;
+	left:0;
+	right:0;
+	margin:auto;
+	z-index:1000
+}
+#myActContainer #publishBox .publishBtnRow {
+	margin-left:auto;
+	margin-right:auto
+}
+#myActContainer #publishBox .pub_column {
+	background:#eaeaea;
+	height:36px;
+	line-height:36px;
+	padding-left:10px;
+	margin:8px 0;
+	font-weight:bold;
+	font-size:14px
+}
+#myActContainer #publishBox #awardInfoBox {
+	border:solid 1px #e7e7eb
+}
+#myActContainer #publishBox #awardInfoBox tr th {
+	font-weight:normal
+}
+#myActContainer #publishBox #awardInfoBox tr:nth-child(even) td {
+	background:#fafafa
+}
+#myActContainer #publishBox #awardInfoBox tr td {
+	text-align:center;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+#myActContainer #publishBox #awardInfoBox tr td:first-child {
+	text-align:left;
+	width:100px;
+	padding:10px
+}
+#myActContainer #publishBox .flag {
+	color:red;
+	vertical-align:-2px
+}
+#myActContainer #publishBox input[type='text'] {
+	width:240px;
+	height:30px;
+	border:1px solid #c8c8c8;
+	padding-left:8px
+}
+#myActContainer #publishBox .activeAwardWay {
+	padding:5px 0
+}
+#myActContainer #publishBox .pubButton {
+	width:80px;
+	line-height:30px;
+	border-radius:3px;
+	font-size:12px;
+	text-align:center;
+	font-weight:bold;
+	display:inline-block;
+	cursor:pointer
+}
+#myActContainer #publishBox .publishTishi {
+	background-image:url(/image/tishi.png?v=201607281150);
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:-3px;
+	margin-right:8px
+}
+#myActContainer #publishBox .hasTipCash {
+	margin-top:10px
+}
+#myActContainer #publishBox #confirmPubBtn {
+	margin-right:20px
+}
+#myActContainer #publishBox .valid {
+	background-color:#358ee0;
+	color:#FFF
+}
+#myActContainer #publishBox .invalid {
+	margin-right:20px;
+	background-color:#f5f5f5;
+	color:#888;
+	border:1px #dcdcdc solid
+}
+#myActContainer #publishBox #cancelPubBtn {
+	border:1px #dcdcdc solid;
+	color:#000;
+	background-color:#f5f5f5
+}
+#myActContainer .linkBox {
+	border:1px solid #cbcbcb;
+	width:470px;
+	border-radius:4px;
+	position:absolute;
+	right:30px;
+	margin-top:9px;
+	background:#fff;
+	margin-left:15px;
+	z-index:1000;
+	padding-bottom:15px
+}
+#myActContainer .linkBox #tabs .tab {
+	width:50%;
+	display:inline-block;
+	font-size:12px;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	background:#f5f5f5;
+	border-bottom:1px solid #c6c6c6;
+	cursor:pointer
+}
+#myActContainer .linkBox .headLine {
+	width:445px;
+	height:40px;
+	margin:0 auto;
+	border-bottom:1px solid #c6c6c6
+}
+#myActContainer .linkBox .headLine .title {
+	font-weight:bold;
+	float:left;
+	margin-top:20px;
+	margin-left:8px;
+	font-size:14px;
+	color:#333
+}
+#myActContainer .linkBox .colseIcon {
+	width:14px;
+	height:14px;
+	cursor:pointer;
+	float:right;
+	background:url(/image/close.png?v=201607281150) no-repeat;
+	background-size:100%;
+	margin-top:16px;
+	margin-top:20px;
+	margin-right:5px
+}
+#myActContainer .linkBox #tabs .checked {
+	background:#fff;
+	border-bottom:0
+}
+#myActContainer .linkBox .tabContent .linkPic {
+	width:145px;
+	height:145px;
+	margin:15px 15px 0 23px;
+	display:inline-block;
+	text-align:center
+}
+#myActContainer .linkBox .includeIcon {
+	width:19px;
+	height:10px;
+	position:absolute;
+	background:url(/image/sanjiao.png?v=201607281150) no-repeat;
+	background-size:100%;
+	right:10px;
+	top:-10px
+}
+#myActContainer .linkBox .tabContent .linkPic .wxFont {
+	color:#666;
+	text-align:left;
+	float:left
+}
+#myActContainer .linkBox .tabContent .linkPic .downCode {
+	color:#666;
+	text-align:left;
+	float:left;
+	cursor:pointer;
+	text-decoration:underline;
+	margin-left:24px
+}
+#myActContainer .linkBox .tabContent .linkPic img {
+	width:100%;
+	height:100%;
+	margin-bottom:5px
+}
+#myActContainer .linkBox #spreadLink .linkInfo {
+	display:inline-block;
+	vertical-align:top;
+	border-left:1px solid #e6e6e6;
+	height:175px;
+	padding-left:10px;
+	margin-top:15px;
+	text-align:left
+}
+#myActContainer .linkBox #spreadLink .downWxPicLine {
+	margin-top:20px;
+	margin-left:6px
+}
+#myActContainer .linkBox #spreadLink .downWxPicLine a {
+	text-decoration:underline;
+	color:#666
+}
+#myActContainer .linkBox #spreadLink .linkSiteBox {
+	position:relative;
+	margin:5px 0;
+	text-align:left;
+	width:245px
+}
+#myActContainer .linkBox #spreadLink .linkSiteBox .linkSite {
+	height:25px;
+	width:191px;
+	border-radius:5px;
+	padding-left:5px;
+	padding-right:3px;
+	font-size:12px;
+	margin-left:4px
+}
+#myActContainer .linkBox #spreadLink .linkSiteBox .copyButton {
+	width:42px;
+	height:25px;
+	position:absolute;
+	border:1px solid #c8c8c8;
+	right:0;
+	top:0;
+	background:#e5e5e5;
+	line-height:25px;
+	cursor:pointer;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	text-align:center
+}
+.showBg {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:300;
+	display:none
+}
+#myActContainer .hideActBar {
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#666;
+	z-index:100;
+	cursor:pointer;
+	//min-height:680px;
+	overflow:hidden
+}
+#myActContainer .hotSaleBox {
+	margin-left:30px;
+	font-weight:bold
+}
+#myActContainer .hotSaleBox .hotSaleImg {
+	width:15px;
+	height:20px;
+	background:url(/image/hot_1.png?v=201607281150) no-repeat;
+	background-size:100%;
+	display:inline-block;
+	vertical-align:-2px;
+	margin-right:4px
+}
+#awardSetBox {
+	width:400px;
+	border-top:dashed 1px #d1d1d1;
+	margin-top:20px;
+	padding-top:20px
+}
+#awardSetBox .awardList {
+	width:210px;
+	float:left;
+	height:40px
+}
+#awardSetBox .awardList:nth-child(even) {
+	width:190px;
+	float:right
+}
+#awardSetBox .prizeCont {
+	width:130px!important;
+	height:26px!important
+}
+.upgradeNow {
+	padding-left:10px
+}
+.upgradeNow:hover {
+	text-decoration:underline
+}
+.setWriteoffContainer {
+	padding-left:30px
+}
+.setWriteoffContainer .head .writeoffTips {
+	color:#999;
+	margin-left:101px
+}
+.setWriteoffContainer .partSetHead {
+	margin-top:40px
+}
+.setWriteoffContainer #searcher {
+	padding:0 4px;
+	padding-right:25px;
+	width:175px
+}
+.setWriteoffContainer #searchIcon {
+	width:16px;
+	height:16px;
+	background:url(/image/search.png?v=201608301815) no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:7px;
+	right:6px
+}
+.width30 {
+	width:30px
+}
+.setWriteoffContainer {
+	height:400px;
+	overflow-y:auto
+}
+.setWriteoffContainer #showEmpTable {
+	margin-top:10px;
+	width:550px
+}
+.setWriteoffContainer .faiTableWrap .center table.faiTable tbody tr td {
+	height:35px
+}
+.setWriteoffContainer .checkIcon {
+	width:14px;
+	height:10px;
+	background:url(/image/check.png?v=201608301815) no-repeat;
+	background-size:100%;
+	margin:auto
+}
+.setWriteoffContainer .bottom {
+	position:absolute;
+	bottom:69px;
+	left:32px;
+	right:0
+}
+#myActContainer .activityTitle {
+	font-weight:bold
+}
+#myActContainer .lineStyle {
+	margin-top:10px;
+	border-top:#e1e1e1 1px solid
+}
+#myActContainer .recycleBox {
+	float:right;
+	width:100px;
+	height:32px;
+	margin:15px auto
+}
+#myActContainer #recycleBinTitle {
+	margin-left:30px;
+	color:#1c8cd
+}
+#showRecycleTable #clearDetailImg {
+	position:absolute;
+	width:16px;
+	height:16px;
+	background-image:url(/image/wenha.png?v=201612261746);
+	background-size:100%;
+	margin:0 10px;
+	display:inline;
+	margin-top:2px
+}
+#showRecycleTable #clearDetailImg:hover {
+	position:absolute;
+	width:16px;
+	height:16px;
+	background-image:url(/image/wenhao-hover.png?v=201612261746);
+	background-size:100%;
+	margin:0 10px;
+	display:inline;
+	margin-top:2px
+}
+#myActContainer .helpTip {
+	position:absolute;
+	background-image:url(/image/tips.png?v=201612261746);
+	height:55px;
+	width:152px;
+	margin-left:59.5%;
+	text-align:center;
+	line-height:23px;
+	font-size:13px;
+	color:white
+}
+#myActContainer .recycleBox {
+	cursor:pointer;
+	background-image:url(/image/qkhsz.png?v=201701061755)
+}
+#myActContainer .recycleBox:hover {
+	cursor:pointer;
+	background-image:url(/image/qkhsz-hover.png?v=201701061755)
+}
+#div_window {
+	position:absolute;
+	z-index:5;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	filter:alpha(opacity=30);
+	opacity:.3;
+	display:none;
+	top:0;
+	left:0
+}
+#myActContainer .statusDisabled {
+	width:75px;
+	color:#e90000;
+	background:url(/image/infoIcon.png?v=201701211025) no-repeat right;
+	margin:0 auto;
+	cursor:pointer
+}
+#myActContainer .statusDisabled:hover .tipBox {
+	display:block
+}
+#myActContainer .tipBox {
+	width:320px;
+	height:50px;
+	background:#ffc;
+	border:1px solid #ffd376;
+	position:absolute;
+	z-index:1000
+}
+#myActContainer .tipBox .info {
+	width:310px;
+	height:45px;
+	line-height:20px;
+	color:#777;
+	text-align:left;
+	margin:7px;
+	white-space:pre-wrap
+}
+#myActContainer .tipBox .sanjiao {
+	width:11px;
+	height:6px;
+	background:url('/image/tsj.png?v=201607281150') no-repeat;
+	position:absolute;
+	bottom:-6px;
+	top:auto;
+	left:60px
+}

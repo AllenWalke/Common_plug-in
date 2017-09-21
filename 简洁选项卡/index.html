@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Tab选项卡切换代码 - 站长素材</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.tabPanel>ul>li').click(function(){
+		$(this).addClass('hit').siblings().removeClass('hit');
+		$('.panes>div:eq('+$(this).index()+')').show().siblings().hide();	
+	});
+
+    check();
+    check2();
+
+	$(".del").click(function () {
+		$(this).parent().addClass("none");
+    });
+
+	function check() {
+        var ali = $("#aul>li");
+        var i = ali.length;
+        if(i>3){
+            $(".seemore").css("display","block");
+        }else {
+            $(".seemore").css("display","none");
+        }
+    }
+    function check2() {
+        var bli = $("#bul>li");
+        var i = bli.length;
+        if(i>3){
+            $(".seemore2").css("display","block");
+        }else {
+            $(".seemore2").css("display","none");
+		}
+    }
+
+    $(".seemore").click(function () {
+        $(".message").css("height","100%");
+        $(".seemore").css("display","none");
+    });
+
+    $(".seemore2").click(function () {
+        $(".message").css("height","100%");
+        $(".seemore2").css("display","none");
+    });
+
+})
+</script>
+
+</head>
+
+<body>
+
+	<div class="wrap">
+		<div class="tabPanel">
+			<ul>
+				<li class="hit">系统消息</li>
+				<li>意见反馈</li>
+			</ul>
+			<div class="panes">
+				<div class="pane" style="display:block;">
+					<p>Hi，你共收到了<a href="" style="color: blue">1</a>条新的系统消息，请注意查看哦。</p>
+					<div class="message">
+						<ul id="aul">
+							<li>
+								<div class="report" style="vertical-align: top">
+									<p><span style="color: blue">系统通知</span> - 10分钟前</p>
+									<span class="more">亲爱的用户，新一期的报告发布了，详情猛戳：<a href="">www.guidelinedata.com</a></span>
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="seemore">显示更多</div>
+				</div>
+				<div class="pane">
+					<p>Hi，你共收到了<a href="" style="color: blue">1</a>条新的系统消息，请注意查看哦。</p>
+					<div class="message">
+						<ul id="bul">
+							<li>
+								<div class="report" style="vertical-align: top">
+									<p><span style="color: blue">系统通知</span> - 10分钟前</p>
+									<span class="more">亲爱的用户，新一期的报告发布了，详情猛戳：<a href="">www.guidelinedata.com</a></span>
+								</div>
+								<div class="del"></div>
+							</li>
+							<li>
+								<div class="report">
+
+								</div>
+								<div class="del"></div>
+							</li>
+
+						</ul>
+					</div>
+					<div class="seemore2">显示更多</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

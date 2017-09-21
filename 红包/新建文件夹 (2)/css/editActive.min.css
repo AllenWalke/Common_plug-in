@@ -1,0 +1,1291 @@
+@charset "utf-8";
+.checkBorder {
+	box-shadow:1px 0 15px rgba(255,99,0,0.8),-1px 0 15px rgba(255,99,0,0.8),0px 1px 15px rgba(255,99,0,0.8),0px -1px 15px rgba(255,99,0,0.8)
+}
+.moveFrame {
+	position:absolute;
+	font-size:0;
+	overflow:hidden;
+	zoom:1;
+	z-index:9028
+}
+.portalMoveFrame {
+	-webkit-animation:frameTwinkle .8s 3 linear;
+	border:#e2cb18 0 solid
+}
+.inputErrMsg a {
+	text-decoration:underline;
+	color:red;
+	cursor:pointer
+}
+.input3 {
+	width:45px
+}
+@-webkit-keyframes frameTwinkle {
+	from {
+		opacity:.3
+	}
+	to {
+		opacity:1
+	}
+}
+.gameMoveFrame {
+	border:#2b73ba 0 dashed;
+	background:#79cef9
+}
+#moduleLayerBox {
+	position:absolute;
+	right:14px;
+	top:68px
+}
+.moduleLayer {
+	margin:0;
+	padding:0;
+	height:24px;
+	z-index:9030;
+	zoom:1;
+	background-color:#56a1e3;
+	border:1px solid #3785ca;
+	border-bottom-style:dashed;
+	font-size:12px;
+	color:#000;
+	font-family:宋体,新宋体;
+	display:inline-block
+}
+.moduleLayer .item {
+	float:left
+}
+.moduleLayer .tool {
+	position:relative;
+	float:left;
+	margin:2px 2px;
+	padding:0 3px;
+	height:20px;
+	line-height:22px;
+	display:inline;
+	text-decoration:none;
+	background-color:#56a1e3;
+	color:#FFF
+}
+.absCenter {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto
+}
+#editActContainer #editActive .editContent {
+	margin-left:35px
+}
+#editActContainer #editActive .editContent .editName {
+	font-size:14px;
+	margin-top:20px
+}
+#editActContainer #editActive .editContent .editDetailBox {
+	margin-top:15px;
+	position:relative
+}
+#editActContainer #editActive .topBar {
+	width:100%;
+	height:40px;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #ebebeb;
+	margin-bottom:10px;
+	background:#fafafa
+}
+#editActContainer #editActive .topBar .title {
+	width:80px;
+	height:100%;
+	line-height:40px;
+	text-align:center;
+	display:inline-block;
+	border-right:1px solid #ebebeb;
+	margin-right:5px
+}
+#editActContainer #editActive .topBar .column,#activeTabSubMenu .column {
+	width:80px;
+	height:100%;
+	line-height:40px;
+	display:inline-block;
+	cursor:pointer;
+	padding-left:2px;
+	text-align:center
+}
+#editActContainer #editActive .topBar .slideBar,#activeTabSubMenu .slideBar {
+	width:100%;
+	height:7px;
+	position:relative
+}
+#editActContainer #editActive .topBar .slideBar .slideBarTip,#activeTabSubMenu .slideBar .slideBarTip {
+	width:55px;
+	height:2px;
+	position:absolute;
+	top:-7px;
+	background:#19a6ff
+}
+#editActContainer #editActive .topBar .slideBar .transitionPanel,#activeTabSubMenu .slideBar .transitionPanel {
+	position:relative;
+	-moz-transition:left .5s cubic-bezier(0.175,0.885,0.320,1.325);
+	-webkit-transition:left .5s cubic-bezier(0.175,0.885,0.320,1.325);
+	-o-transition:left .5s cubic-bezier(0.175,0.885,0.320,1.325);
+	transition:left .5s cubic-bezier(0.175,0.885,0.320,1.325)
+}
+#editActContainer #editActive .topBar .flag {
+	display:inline-block;
+	width:5px;
+	height:9px;
+	background:url('/image/flag.png?v=201607281150') no-repeat;
+	background-size:100%;
+	margin-left:15px
+}
+#editActContainer #editActive .topBar .lastFlag {
+	display:inline-block;
+	width:5px;
+	height:9px;
+	background-size:100%;
+	margin-left:15px
+}
+.editContent .phone {
+	width:348px;
+	height:650px;
+	vertical-align:top;
+	display:inline-block;
+	border-radius:5px;
+	background:url('/image/phone.png?v=201607281150') no-repeat;
+	background-size:100%;
+	position:relative
+}
+#editActContainer #editActive .editContent .phone .wxTitle {
+	width:320px;
+	height:64px;
+	background:url('/image/wxTitle.png?v=201607281150') no-repeat;
+	background-size:100%;
+	margin:30px auto 0;
+	position:relative
+}
+#editActContainer #editActive .editContent .phone .wxTitle #actName {
+	font-size:18px;
+	color:#fff;
+	text-align:center;
+	height:20px;
+	line-height:20px;
+	width:210px;
+	position:absolute;
+	left:65px;
+	right:0;
+	bottom:9px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	padding:3px 0;
+	font-family:'微软雅黑'
+}
+#editActContainer #editActive .editContent .phone #gameContent {
+	width:320px;
+	height:504px;
+	margin:0 auto
+}
+#gameContent {
+	position:relative
+}
+#editActContainer #editActive .editContent .phone .changePage {
+	width:27px;
+	height:48px;
+	cursor:pointer;
+	background:rgba(0,0,0,0.4);
+	position:absolute;
+	top:0;
+	bottom:0;
+	margin:auto
+}
+#editActContainer #editActive .editContent .phone #changeLeft {
+	left:-13px;
+	border-top-left-radius:4px;
+	border-bottom-left-radius:4px
+}
+#editActContainer #editActive .editContent .phone #changeRight {
+	right:-13px;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px
+}
+#editActContainer #editActive .editContent .phone .changePage .img {
+	width:17px;
+	height:37px;
+	margin:0 auto;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-image:url('/image/jiantou.png?v=201607281150');
+	background-size:100%
+}
+#editActContainer #editActive .editContent .phone #changeLeft .leftImg {
+	background-position:0 -58px
+}
+#editActContainer #editActive .editContent .phone #changeRight .rightImg {
+	background-position:0 11px
+}
+#editActContainer #editActive .editContent .editDetail {
+	display:inline-block;
+	margin-left:30px;
+	width:512px;
+	padding:0 5px;
+	position:relative
+}
+#editActContainer #editActive .editContent .editDetailBoxEr {
+	width:520px
+}
+#editActContainer #editActive .editContent #activeTab .tabSetting {
+	display:inline-block;
+	width:25%;
+	height:40px;
+	background:#eaeaea;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer
+}
+#editActContainer #editActive .editContent #activeTab .checked {
+	background:#3896dc;
+	color:#fff
+}
+#skillSupport input[type='radio']+label {
+	margin-right:15px
+}
+#skillSupport .skillTitle,#skillSupport .skillTitle {
+	display:inline-block
+}
+#skillSupport .skillSupportLine {
+	margin:15px 0 5px 95px
+}
+.skillSupportLine input {
+	width:230px;
+	padding:1px 0 1px 6px
+}
+#activeTabSubMenu {
+	height:40px;
+	border-bottom:solid 1px #f1f1f1;
+	margin-bottom:20px;
+	position:relative
+}
+#activeTabSubMenu .column {
+	padding-left:0;
+	width:100px
+}
+#activeTabSubMenu .slideBar .slideBarTip {
+	top:-2px;
+	width:68px
+}
+#editActContainer #editActive .editContent .baseSettingTitle {
+	display:inline-block;
+	width:84px;
+	margin:0 10px 0 0
+}
+#editActContainer #editActive .editContent .baseSettingTitle2 {
+	display:inline-block;
+	width:80px;
+	padding-left:3px
+}
+#editActContainer #editActive .editContent .baseSettingTitle3 {
+	display:inline-block
+}
+#editActContainer #editActive .editContent #baseSetting #setGameTimeBox {
+	margin-top:10px;
+	margin-bottom:10px
+}
+#editActContainer #editActive .editContent #baseSetting #attention_item {
+	color:#666;
+	font-size:12px;
+	font-weight:500;
+	margin:10px 0 0 20px
+}
+#editActContainer #editActive .editContent .baseLine {
+	position:relative
+}
+#editActContainer #editActive .editContent .baseLine3 {
+	margin:12px 0 10px;
+	line-height:30px
+}
+#editActContainer #editActive .editContent .joinNumLimit {
+	margin-bottom:20px
+}
+#editActContainer #editActive .editContent .setCodeTimeBox .codeTimeBox select {
+	line-height:28px;
+	height:28px
+}
+#editActive .editContent .divBeInput {
+	width:150px;
+	border:1px solid #c8c8c8;
+	padding-left:8px;
+	background-color:#fff
+}
+#editActive .editContent .awardTypeBox {
+	position:absolute;
+	width:158px;
+	border:1px solid #c8c8c8;
+	border-top:0;
+	background:#fff;
+	z-index:1
+}
+#editActive .editContent .awardTypeValue .detailIcon {
+	margin:10px 10px 0 0
+}
+#editActive .editContent .awardTypeBox .option {
+	cursor:default;
+	padding-left:8px
+}
+#editActive .editContent .awardTypeBox .option:hover,#editActive .editContent .awardTypeBox .option.checked {
+	background:#3896dc;
+	color:#fff
+}
+#editActContainer #editActive .editContent #awardsSetting .awardTitle {
+	width:84px;
+	display:inline-block
+}
+#editActContainer #editActive .editContent .mg110 {
+	margin-left:116px
+}
+#editActContainer #editActive .editContent .flag2 {
+	display:inline-block;
+	width:24px;
+	color:red;
+	margin:0
+}
+#editActContainer #editActive .editContent .menuBox {
+	border:1px solid #dcdcdc;
+	background:#fff;
+	padding:10px;
+	overflow:hidden;
+	background:#f9f9f9
+}
+#editActContainer #editActive .editContent .awardLevelBox {
+	border-bottom:0;
+	height:14px;
+	background:#f9f9f9
+}
+#editActContainer #editActive .editContent .setGameTypeBox {
+	background:#f9f9f9
+}
+#editActContainer #editActive .editContent .awardLevelBox .awardNumOpt {
+	width:18px;
+	height:18px;
+	border:1px solid #ccc;
+	display:inline-block;
+	margin-top:-4px;
+	border-radius:3px;
+	background-color:#e6e6e6;
+	font-size:20px;
+	text-align:center;
+	line-height:20px;
+	color:#777;
+	font-weight:bold
+}
+#editActContainer #editActive .editContent .setAwardAmountBox {
+	position:absolute;
+	border:1px solid #ccc;
+	background-color:#fff;
+	width:260px;
+	top:44px;
+	padding:10px 20px;
+	z-index:10
+}
+#editActContainer #editActive .editContent .awardAmountBox .amountIcon {
+	width:20px;
+	height:20px;
+	background:url('/image/bi.png?v=201607281150') no-repeat;
+	position:absolute;
+	top:4px;
+	right:5px
+}
+#editActContainer #editActive .editContent #addAwardDetail .sanjiao {
+	background:url('/image/xsj1.png?v=201607281150') no-repeat;
+	width:12px;
+	height:6px;
+	position:absolute;
+	top:-6px;
+	right:6px
+}
+#editActContainer #editActive .editContent .setAwardAmountBox .buttonBox {
+	width:100%;
+	text-align:left;
+	margin-top:15px;
+	margin-bottom:0
+}
+#editActContainer #editActive .editContent .setAwardAmountBox .sanjiao {
+	background:url('/image/dsj.png?v=201607281150') no-repeat;
+	width:16px;
+	height:8px;
+	position:absolute;
+	top:-8px;
+	left:20px
+}
+#editActContainer #editActive .editContent .awardLevelBox .addAwardDetail {
+	background-color:#fff;
+	padding:5px 8px;
+	border:1px solid #dcdcdc;
+	position:absolute;
+	top:78px;
+	right:8px;
+	z-index:10
+}
+#editActContainer #editActive .editContent .exitCuscodeTips {
+	position:absolute;
+	color:#333;
+	border:1px solid #c8c8c8;
+	padding:2px 8px;
+	background-color:#fff;
+	bottom:30px;
+	left:-30px;
+	max-height:180px;
+	overflow-y:auto;
+	width:390px;
+	line-height:20px;
+	word-wrap:break-word;
+	box-sizing:border-box;
+	min-height:55px
+}
+#editActContainer #editActive .editContent .awardSettingLine .contactBox label,#editActContainer #editActive .editContent .baseLine1 .contactBox label {
+	margin-left:3px;
+	margin-right:5px
+}
+#editActContainer #editActive .editContent .awardSettingLine .contactBox.inputErr,#contactBoxNoDraw.inputErr {
+	border:none!important
+}
+#editActContainer #editActive .editContent .awardSettingLine {
+	width:95%;
+	margin-left:10px
+}
+#editActContainer #editActive .editContent .baseLine1 {
+	margin:10px 0 0
+}
+.exitCuscodeCloseBtn {
+	bottom:31px;
+	position:absolute;
+	width:370px;
+	text-align:right;
+	background:#fff;
+	left:-28px;
+	right:0;
+	margin-right:50px;
+	color:#666;
+	padding:5px 0 10px
+}
+#editActContainer #editActive .editContent .cusCodeInputBox {
+	position:relative
+}
+#editActContainer #editActive .editContent .tipsArrow {
+	position:absolute;
+	bottom:13px;
+	right:5px;
+	border-style:solid;
+	border-left:solid 9px transparent;
+	border-right:solid 9px transparent;
+	border-bottom:solid 9px transparent;
+	border-top:solid 9px #c8c8c8
+}
+#editActContainer #editActive .editContent .tipsArrow:after {
+	content:'';
+	position:absolute;
+	bottom:-5px;
+	right:-7px;
+	border-style:solid;
+	border-left:solid 7px transparent;
+	border-right:solid 7px transparent;
+	border-bottom:solid 7px transparent;
+	border-top:solid 7px #fff
+}
+#editActContainer #editActive .editContent .awardLevelBox .addAwardDetail .addLine {
+	line-height:20px
+}
+#editActContainer #editActive .editContent .awardTextArea {
+	width:330px;
+	height:90px;
+	max-width:330px;
+	margin-top:6px;
+	padding:5px;
+	border:1px solid #c8c8c8
+}
+#editActContainer #editActive .editContent .checkCuscodeBtn {
+	width:90px;
+	height:35px;
+	background:#358ee2;
+	border-radius:4px;
+	line-height:35px;
+	text-align:center;
+	color:#fff;
+	margin-left:9px;
+	position:absolute;
+	right:10px
+}
+#editActContainer #editActive .editContent .awardLevelBox .awardLevelItem {
+	float:left;
+	cursor:pointer;
+	width:46px;
+	text-align:center;
+	margin-right:3px;
+	padding:3px 0;
+	border-radius:3px;
+	margin-top:-3px;
+	position:relative
+}
+#editActContainer #editActive .editContent .awardLevelBox .awardLevelItem .awardErrDot {
+	display:none
+}
+#editActContainer #editActive .editContent .awardLevelBox .awardLevelItem.hasErr .awardErrDot {
+	display:block
+}
+#editActContainer #editActive .editContent .awardLevelBox .awardLevelItem.checked .awardErrDot {
+	display:none
+}
+#editActContainer #editActive .editContent .awardLevelBox .awardLevelItem.checked {
+	background-color:#3896dc;
+	color:#fff
+}
+#editActContainer #editActive .editContent .noBotBorder {
+	border-bottom:0;
+	background:#f9f9f9
+}
+#editActContainer #editActive .editContent .noTopBorder {
+	border-top:0
+}
+#editActContainer #editActive .editContent .explain {
+	color:#808080;
+	display:inline-block;
+	margin-top:5px
+}
+.editContent input[type='text'],.editContent .awardType {
+	height:28px;
+	border:1px solid #c8c8c8;
+	outline:0;
+	padding-left:8px
+}
+#gameTypeSetting input[type='text'] {
+	padding:0;
+	line-height:30px;
+	text-align:center;
+	width:40px
+}
+.editContent .awardType:disabled {
+	background:#ebebe4;
+	color:#666
+}
+.editContent .awardType {
+	width:150px;
+	height:30px
+}
+.editContent .awardType option {
+	line-height:28px
+}
+.editContent input[type='text']:focus {
+	border:1px solid #368ee0
+}
+.editContent .input1 {
+	width:380px
+}
+.editContent .input2 {
+	width:140px
+}
+.editContent .input3 {
+	width:45px
+}
+.editContent .input4 {
+	width:38px
+}
+.editContent .input5 {
+	width:333px
+}
+.editContent .input6 {
+	width:230px
+}
+.editContent .input7 {
+	width:150px
+}
+.editContent .input8 {
+	width:180px
+}
+.editContent .numInputErr {
+	color:red!important
+}
+#editActContainer #editActive .editContent .setAwardTextBox .awardText {
+	width:225px;
+	height:70px;
+	border:1px solid #c8c8c8;
+	max-width:225px;
+	max-height:70px;
+	vertical-align:top;
+	padding:5px
+}
+.editContent .detailIcon {
+	width:9px;
+	height:10px;
+	background:url('/image/aIcon.png?v=201607281150') no-repeat;
+	background-size:100%;
+	background-position:0 -33px;
+	float:right;
+	margin-top:12px
+}
+#editActContainer #editActive .editContent .awardErrDot {
+	position:absolute;
+	width:6px;
+	height:6px;
+	background-color:#f00;
+	top:0;
+	right:2px;
+	border-radius:20px
+}
+#editActContainer #editActive .editContent .setCodeTimeErrBox {
+	color:#f00;
+	height:30px;
+	display:none;
+	position:relative
+}
+#editActContainer #editActive .editContent .useCodeBeginTimeErr {
+	position:absolute;
+	left:120px;
+	display:none
+}
+#editActContainer #editActive .editContent .useCodeEndTimeErr {
+	position:absolute;
+	left:293px;
+	display:none
+}
+#editActContainer #editActive .editContent #baseSetting #businessContainerBox {
+	margin-left:116px
+}
+#editActContainer #editActive .editContent #baseSetting #businessOutTriangle {
+	width:0;
+	height:0;
+	border-width:0 6px 9px;
+	border-style:solid;
+	border-color:transparent transparent #ffd376;
+	position:relative;
+	left:37px
+}
+#editActContainer #editActive .editContent #baseSetting #businessInTriangle {
+	width:0;
+	height:0;
+	border-width:0 6px 9px;
+	border-style:solid;
+	border-color:transparent transparent #ffc;
+	position:absolute;
+	left:-6px;
+	top:2px
+}
+#editActContainer #editActive .editContent #baseSetting #businessTextBox {
+	width:364px;
+	padding:8px;
+	font-size:12px;
+	border:1px solid #ffd376;
+	background:#ffc
+}
+#editActContainer #editActive .editContent #baseSetting #businessTextBox h5 {
+	font-size:12px;
+	line-height:20px;
+	margin-bottom:5px
+}
+#editActContainer #editActive .editContent #baseSetting #businessTextBox p {
+	font-size:12px;
+	line-height:1.6em;
+	color:#666
+}
+#editActContainer #editActive .editContent #baseSetting textarea {
+	width:380px;
+	height:145px;
+	max-width:380px;
+	line-height:18px;
+	font-size:12px;
+	border:1px solid #c8c8c8;
+	padding:5px;
+	margin-left:-3px
+}
+#editActContainer #editActive .editContent #baseSetting #limitNumMsg {
+	color:#808080;
+	margin-left:30px
+}
+#editActContainer #awardsSetting p {
+	color:#5c5c5c;
+	line-height:18px
+}
+#editActContainer #awardsSetting .topAwardExplain {
+	color:#5c5c5c;
+	line-height:22px
+}
+#editActContainer #awardsSetting .awardBox .awardNums select {
+	width:50px;
+	height:22px;
+	text-align:center
+}
+#editActContainer #awardsSetting .awardBox .awardNums select option {
+	padding-right:12px
+}
+#editActContainer #awardsSetting .awardBox .awardNums .awardNumsMsg {
+	color:#737373;
+	margin-left:18px
+}
+#editActContainer #awardsSetting .awardBox .awardDetail {
+	position:relative;
+	//height:255px;
+	max-height:480px;
+	overflow-y:auto;
+	overflow-x:hidden
+}
+#editActContainer #awardsSetting .awardBox .awardDetail .awardSettingBox {
+	position:relative;
+	top:0;
+	width:100%
+}
+#editActContainer #awardsSetting .awardBox .awardDetail .awardLine:first-child {
+	padding-top:0
+}
+#editActContainer #awardsSetting .awardBox .awardDetail .awardLine:last-child {
+	border-bottom:0;
+	padding-bottom:0
+}
+#editActContainer #awardsSetting .awardBox .awardDetail .timeLimitSelBox {
+	margin-left:108px;
+	width:360px
+}
+#editActContainer #awardsSetting .awardBox .awardDetail .timeLimitSelBox .timeLimitDayLabel {
+	display:inline-block;
+	height:30px;
+	vertical-align:middle
+}
+#areaSelectBox .areaSelect {
+	height:30px;
+	width:150px;
+	border:1px solid #c8c8c8;
+	border-radius:0;
+	outline:0
+}
+#areaSelectBox .areaSelect option {
+	padding:5px
+}
+#editActContainer #moreSetting .logoImg {
+	background-image:none
+}
+#editActContainer #moreSetting .menu {
+	margin:30px 0 0 17px
+}
+#editActContainer #moreSetting .footSetting #QRCodeBox {
+	display:inline-block
+}
+#editActContainer #moreSetting .footSetting #QRCodeBox #QRloadButton {
+	padding-bottom:10px
+}
+#editActContainer .chooseImg .uploadify-button {
+	width:70px;
+	height:20px;
+	border:1px solid #c8c8c8;
+	background:#f9f9f9;
+	text-align:center;
+	line-height:20px;
+	padding:1px
+}
+#editActContainer .comUploadImg {
+	display:inline-block;
+	width:48px;
+	height:48px
+}
+#editActContainer .comUploadBox {
+	display:inline-block;
+	margin-left:10px
+}
+#editActContainer .comUploadBox .btn {
+	width:72px;
+	height:22px;
+	padding-bottom:6px;
+	display:table-cell;
+	cursor:pointer
+}
+#editActContainer .comUploadExplain {
+	color:#808080;
+	line-height:normal
+}
+#editActContainer .wxShareTextBox {
+	margin-right:5px;
+	background-color:#fbfbfb;
+	font-size:12px;
+	margin-top:12px
+}
+#editActContainer .wxShareTextBox .wxShareTextTitelBox {
+	position:relative;
+	border:1px solid #c8c8c8;
+	border-bottom:0;
+	height:34px
+}
+#editActContainer .wxShareTextBox .wxShareTextTitel {
+	height:34px;
+	line-height:34px;
+	color:#555;
+	padding-left:5px;
+	float:left
+}
+#editActContainer .wxShareTextBox .wxShareTextOther {
+	border-left:1px solid #c8c8c8;
+	width:60px;
+	height:34px;
+	line-height:34px;
+	text-align:center;
+	float:right;
+	cursor:pointer
+}
+#editActContainer .wxShareTextBox .insertIco {
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background-image:url(/image/show.png?v=201607281150);
+	background-size:100%;
+	vertical-align:-3px;
+	margin-right:4px
+}
+#editActContainer #wxShareTextWrap #wxShareWarm {
+	color:#808080;
+	margin:8px 0 0 120px;
+	line-height:18px
+}
+#editActContainer #shareSetBox #wxShareWarm2 {
+	margin:4px 0 0 120px;
+	line-height:18px
+}
+#editActContainer .wxShareTextBox .tagOptionsBox {
+	border:1px solid #c8c8c8;
+	position:absolute;
+	right:-1px;
+	top:34px;
+	background-color:#fbfbfb;
+	z-index:100;
+	display:none
+}
+#editActContainer .wxShareTextBox .tagOptions {
+	width:70px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	cursor:pointer
+}
+#editActContainer .wxShareTextBox .tagOptions:hover {
+	background-color:#f5f5f5
+}
+#editActContainer .wxShareTextBox .wxShareTextContent {
+	border:1px solid #c8c8c8;
+	height:80px;
+	width:379px;
+	max-width:379px;
+	line-height:18px;
+	padding:5px;
+	color:#333;
+	outline:0;
+	word-wrap:break-word;
+	overflow-x:hidden;
+	overflow-y:auto;
+	-webkit-user-modify:read-write-plaintext-only
+}
+#editActContainer .wxShareTextBox .wxShareTextContent:focus {
+	border:1px solid #368ee0
+}
+#editActContainer .wxShareTextBox .tag {
+	border:1px solid #c8c8c8;
+	background-color:#f5f5f5;
+	padding:0 5px;
+	color:#555;
+	margin:1px;
+	line-height:20px;
+	display:inline-block
+}
+.uploadtime {
+	background-color:#f0f0f0;
+	position:absolute;
+	bottom:-15px;
+	width:210px;
+	height:16px;
+	border-radius:4px;
+	overflow:hidden;
+	display:none;
+	line-height:normal
+}
+.uploadInner,.uploadpercent,.cancelUpload {
+	display:inline-block;
+	vertical-align:middle
+}
+.uploadInner {
+	width:150px;
+	background-color:#afafaf;
+	height:5px;
+	margin-left:5px;
+	border-radius:4px;
+	overflow:hidden
+}
+.uploadprogres {
+	height:8px;
+	width:0;
+	background-color:#089fff
+}
+.uploadpercent {
+	color:#666;
+	font-size:12px;
+	width:25px;
+	margin-left:5px;
+	text-align:center
+}
+.cancelUpload {
+	margin-left:10px;
+	width:10px;
+	height:10px;
+	background:url(../image/close.png?v=201607281150) no-repeat;
+	background-size:100% auto;
+	background-position:center center;
+	cursor:pointer
+}
+#uploadInfoBox .musicUploadBox .uploadify-button-game {
+	margin:0
+}
+#uploadImgBox .musicUploadBox .btnBox {
+	margin-left:45px;
+	margin-bottom:15px;
+	margin-top:10px
+}
+#uploadImgBox .listenAnd .btnBox {
+	margin-left:75px
+}
+.fixBottombar {
+	position:fixed;
+	left:35px;
+	bottom:0
+}
+#editActContainer #editActive .editContent .menuBox_1 {
+	margin-left:80px;
+	border:0
+}
+.base_overflow,.qrcode_1 {
+	overflow:hidden
+}
+#menuLinkSpan_1,.qrcode_1 .QRImg_1,.qrcode_1 .QRloaBox {
+	float:left
+}
+#QRCodeBox_1 {
+	padding-left:13px;
+	float:left
+}
+.qrcode_1 {
+	padding-left:13px
+}
+.cusAwardImgBox {
+	width:108px;
+	height:108px;
+	border:solid 1px #ccc;
+	float:left;
+	vertical-align:middle;
+	margin-right:15px;
+	position:relative;
+	overflow:hidden
+}
+.uploadAwardBtnBox {
+	margin:35px 0 0 5px
+}
+.uploadAwardBtnBox a,#uploadCardBtnBox a {
+	width:90px;
+	height:30px;
+	border-radius:3px;
+	display:inline-block;
+	text-align:center;
+	line-height:30px;
+	color:#fff;
+	cursor:pointer;
+	background:#1c96e3;
+	padding-bottom:0
+}
+.uploadAwardBox .uploadtime {
+	background:0;
+	position:static;
+	height:30px
+}
+.uploadAwardBox .uploadtime .uploadInner {
+	margin-left:0
+}
+.cusAwardImg img {
+	margin:auto;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0
+}
+.TheKlcfTips,.MyLimit,#drawLimitErr {
+	color:#808080
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox {
+	width:100px;
+	height:88px;
+	//background:#fff;
+	border-right:1px solid #f9f9f9;
+	border-left:1px solid #f9f9f9;
+	color:#666;
+	position:relative
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox.checked {
+	background:#fff;
+	border-bottom:0;
+	border-right:1px solid #dcdcdc;
+	border-left:1px solid #dcdcdc;
+	color:#000
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox.checked:after {
+	position:absolute;
+	content:'';
+	display:block;
+	width:18px;
+	height:18px;
+	background:url('/image/gameTypeCheck.png') no-repeat;
+	right:2px;
+	bottom:2px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox.checked .iconOuter {
+	background-position:0 0
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox:first-child.checked {
+	border-left:none
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox.speciallPointed {
+	border-right:0
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .iconOuter {
+	width:44px;
+	height:44px;
+	background-image:url('/image/pjfs.png?v=201609051755');
+	background-position:0 0;
+	margin:10px auto 0;
+	position:relative
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .iconOuter {
+	background-position:0 -78px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .icon {
+	width:28px;
+	height:26px;
+	background-image:url('/image/pjfs.png?v=201609051755');
+	position:absolute;
+	top:8px;
+	left:10px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .drawIcon {
+	background-position:-10px -156px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .rankIcon {
+	background-position:-10px -233px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .regIcon {
+	background-position:-10px -302px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .change {
+	background-position:-10px -448px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .sendIcon {
+	background-position:-9px -375px;
+	left:9px
+}
+.editActContainer #gameTypeSetting .setGameTypeBox .iconBox .font {
+	text-align:center;
+	margin-top:10px
+}
+.editActContainer #gameTypeSetting #gameTypeDesc {
+	background-color:#fff
+}
+.editActContainer #gameTypeSetting #gameTypeDesc .text {
+	padding:12px 8px;
+	margin:auto;
+	text-align:left;
+	line-height:20px
+}
+.editActContainer #gameTypeSetting #gameTypeDesc .hykjtxt {
+	text-align:left
+}
+.editActContainer #gameTypeSetting #gameTypeDesc #gameTypeDescBorder {
+	border-bottom:1px solid #dcdcdc;
+	margin:auto
+}
+.editActContainer #gameTypeSetting #drawSetBox {
+	background-color:#fff;
+	padding:0 20px 15px;
+	line-height:20px
+}
+#drawSetBox .powerIcon {
+	margin-right:5px
+}
+#imgSizeShow {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:50px;
+	height:30px;
+	z-index:999999;
+	opacity:1;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:2px;
+	color:#fff;
+	padding:5px
+}
+.newAttention {
+	display:inline-block
+}
+.oneAttention {
+	margin-left:12px
+}
+.AttentionBox .attentionImg,.AttentionBox .QRloaBox {
+	vertical-align:middle
+}
+.clearfix:after {
+	content:" ";
+	display:block;
+	clear:both;
+	height:0
+}
+.clearfix {
+	zoom:1
+}
+.floatLeft {
+	float:left
+}
+.onlineCashImg,#editActContainer .comUploadBox {
+	vertical-align:middle
+}
+.hd-wxCardNameBox {
+	background:#fff;
+	border:1px solid #dcdcdc;
+	margin-top:12px;
+	padding:10px 0 12px 10px;
+	width:328px
+}
+.hd-wxCardNameBox-top {
+	padding-bottom:10px
+}
+.hd-wxCardNameBox-bottom .hd-wxCardName-value {
+	border:1px solid #dcdcdc
+}
+.showImgBox {
+	border:1px solid #a0a0a0;
+	padding:2px;
+	background:rgba(0,0,0,0.2);
+	width:54px;
+	height:54px;
+	position:relative
+}
+.showImgBox img {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin:auto
+}
+.inputBox {
+	margin-left:10px
+}
+.innerBox .uploadify-button {
+	width:70px;
+	height:20px;
+	border:1px solid #c8c8c8;
+	background:#f9f9f9;
+	text-align:center;
+	line-height:20px;
+	padding:1px;
+	cursor:pointer
+}
+.boxShower {
+	margin-left:5px
+}
+.input30 {
+	width:30px
+}
+.needFriensNum {
+	width:330px
+}
+.selectPicHY {
+	display:block
+}
+.hd-select {
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background:url('/image/aIcon.png?v=201607281150') no-repeat scroll 134px -23px transparent;
+	padding-right:16px;
+	padding-left:8px;
+	height:30px;
+	width:150px;
+	border:1px solid #c8c8c8;
+	border-radius:0;
+	outline:0
+}
+.hd-select::-ms-expand {
+	display:none
+}
+.strongAttBox {
+	padding:10px;
+	background:#f9f9f9;
+	border:1px solid #dcdcdc
+}
+.strongAttTxt_diff {
+	margin:10px 0
+}
+.marginLeft10 {
+	display:inline-block;
+	margin-left:10px
+}
+.strongAttentions {
+	vertical-align:middle
+}
+.answerTitle {
+	position:relative;
+	display:inline-block;
+	width:62px
+}
+.answerTitle:after {
+	position:absolute;
+	content:"：";
+	display:block;
+	bottom:0;
+	right:-12px
+}
+.cashWxTip {
+	margin-left:113px
+}
+.cashAddress {
+	display:inline-block;
+	vertical-align:top
+}
+#drawTimesLimitErr {
+	color:#f00
+}
+#gameTypeSetting .settingLine {
+	margin-top:15px;
+	height:30px
+}
+#gameTypeSetting .inputErrTips {
+	line-height:20px;
+	display:none;
+	color:#f00
+}
+#gameTypeSetting .baseLine {
+	margin:15px 0 0!important
+}
+#gameTypeSetting .baseLine1 {
+	margin:15px 0 0!important
+}
+#gameTypeSetting #HelpDetailSettingBox {
+	line-height:20px
+}
+#gameTypeSetting .baseSettingTitle {
+	width:auto!important;
+	margin:0!important
+}
+#gameTypeSetting .menuBox {
+	background:#fff!important
+}
+#gameTypeSetting .noBotBorder {
+	background:#f9f9f9!important
+}
+#gameTypeSetting .lineHeight30 {
+	line-height:30px
+}
+#openAwardLinkNoDrawBox {
+	line-height:20px
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <title>demo</title>
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<style type="text/css">
+    *{margin:0;padding:0;}
+    #Carousel ul,
+    #num li,
+    #img li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        list-style-type: none;
+    }
+    #Carousel {
+        width: 1200px;
+        height: 384px;
+        position: relative;
+        overflow: hidden;
+        float: left;
+    }
+    #imgs li {
+        float: left;
+        width: 1200px;
+        height: 100%;
+    }
+
+    #imgs {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .a {
+        background: white;
+    }
+
+    .b {
+        background: none;
+    }
+
+    #num {
+        overflow: auto;
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+    }
+
+    #num li {
+        float: left;
+        height: 8px;
+        width: 8px;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #CCC;
+        margin-left: 10px;
+        cursor: pointer;
+        z-index: 2222;
+    }
+</style>
+<body>
+<div id="Carousel">
+    <ul id="imgs">
+        <li><img src="images2/banner—main.jpg"/></li>
+        <li><img src="images2/banner—main2.jpg"/></li>
+        <li><img src="images2/banner—main3.jpg"/></li>
+        <li><img src="images2/banner—main4.jpg"/></li>
+    </ul>
+    <ul id="num">
+        <li class="a"></li>
+        <li class="b"></li>
+        <li class="b"></li>
+        <li class="b"></li>
+    </ul>
+
+</div>
+<script type="text/javascript">
+    var dt=null;
+    var iNow=0;
+    var nums = null;
+    var imgs = null;
+    $(function(){
+        imgs= $('#imgs li');
+        nums=$('#num li');
+        $("#imgs").append("<li>"+imgs[0].innerHTML+"</li>");
+        imgs= $('#imgs li');
+        $('#imgs').css('width',imgs.length*imgs[0].offsetWidth+"px");
+        start();
+    });
+
+    function tab(){
+
+        for(var i=0;i<nums.length;i++){
+            nums[i].index=i;
+            nums[i].onclick=function(){
+                clearInterval(dt);
+                iNow=this.index;
+                for(var i=0;i<nums.length;i++){
+                    nums[i].className="b";
+                }
+                this.className="a";
+                $('#imgs').css('left',-(imgs[0].offsetWidth*iNow)+"px");    //这边可以加上我前面所写的那个缓动框架
+            };
+            nums[i].onmouseout=function(){
+                start();
+            }
+        }
+    }
+
+    function start(){
+        clearInterval(dt);
+        dt=setInterval(function(){
+            if(iNow>nums.length-1){
+                iNow=0;
+            }else{
+                iNow++;
+            }
+            for(var k=0;k<nums.length;k++){
+                if(iNow==nums[k].index){nums[k].className='a';}else{nums[k].className='b';}
+            }
+            $('#imgs').animate({"left":-(imgs[0].offsetWidth*iNow)+"px"},500,function () {
+               if(iNow===nums.length){
+                   $('#imgs').css("left","0");
+                   nums[0].className='a';
+                   iNow=0;
+               }
+            });    //这边可以加上我前面所写的那个缓动框架
+        },3000);
+        tab();
+    }
+</script>
+</body>
+</html>

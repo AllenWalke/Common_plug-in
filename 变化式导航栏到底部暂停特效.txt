@@ -1,0 +1,19 @@
+.right_bar{
+    width: 90px;
+    height: 280px;
+    position: fixed;
+    bottom: 130px;
+    left: 50%;
+    margin-left: 570px;
+}
+
+function initBackTopSeat() {
+            $(document).scrollTop() >= $(".footer").offset().top - document.documentElement.clientHeight ? $(".right_bar").css({
+                bottom: $(".footer").height() - ($(document).height() - $(document).scrollTop() - document.documentElement.clientHeight - 130)
+            }) : $(".right_bar").css({
+                bottom: 130
+            })
+        }
+
+
+http://www.zcool.com.cn/?p=3#tab_anchor

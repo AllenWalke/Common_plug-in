@@ -1,0 +1,35 @@
+
+
+ <div class="butlong" style="position:relative;">
+        <input type="button" value="长按删除" class="delete"/>
+        <div class="longpre" style="display: none"><a style="position:absolute; left:90px; top:0; color:red;" class="deletefont">删除</a>
+            <a style="position:absolute; left:120px; top:0; color:red;" class="cancel">取消</a></div>
+    </div>
+
+
+
+ $.fn.longPress = function(fn) {
+        var timeout = undefined;
+        var $this = this;
+        for(var i = 0;i<$this.length;i++){
+            $this[i].addEventListener('touchstart', function(event) {
+                var j=$(this);
+                timeout = setTimeout(function(e){
+                    j.siblings().show();
+                }, 800);  //长按时间超过800ms，则执行传入的方法
+            }, false);
+            $this[i].addEventListener('touchend', function(event) {
+                clearTimeout(timeout);  //长按时间少于800ms，不会执行传入的方法
+            }, false);
+        }
+    };
+
+    $('.delete').longPress(function(e){
+    });
+    $('.deletefont').on('touchend',function(){
+        $(this).parent().parent().remove();
+        $(this).parent().remove();
+    });
+    $('.cancel').on('touchend',function(){
+        $(this).parent().hide();
+    })

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <style>
+        .structure {
+            margin-bottom: 15px;
+            /* border-bottom: 1px solid #EAEAEA; */
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: right 13px;
+            background-image: url(img/arrowdown_icon@2x.png);
+            display: none;
+            color: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var json = [{
+                name: 123,
+                id: 1,
+                children: [{
+                        name: 453,
+                        id: 456,
+                        children: [{
+                            name: 789,
+                            id: 777,
+                            children: [{
+                                name: "hahahqqq---qq",
+                                id: 3232,
+                                children: [{name: 'son', id: "13132123211"}]
+                            }]
+                        }]
+                    },
+                    {
+                        name: "Cessihshis",
+                        id: 12121
+                    },
+                ],
+            },
+            {
+                name: "啊啊啊11",
+                id: 12
+            }
+
+        ]
+
+        function render (json){
+            if(!Array.isArray(json)||json.length<=0){
+                return ''
+            }
+            var ul=$("<ul class='structure'>");
+            json.forEach(function(item,i){
+                var li=$("<li class='structure_li'>"+item.name+"</li>");
+                if(Array.isArray(item.children)&&item.children.length>0){
+                    li.append(render(item.children))
+                }
+                ul.append(li);
+            })
+            return ul
+        }    
+       
+      
+        $("body").append(render(json));($(".structure").eq(0).css("display","block"));
+        $(".structure_li").click(function(e){
+            e.stopPropagation();
+            if($(this).children(".structure").css("display")==="none"){
+                $(this).children(".structure").show()
+            }else{
+                $(this).find(".structure").hide()
+            }
+        })
+        $(".structure").parent(".structure_li").css("color","blue")
+    </script>
+</body>
+
+</html>

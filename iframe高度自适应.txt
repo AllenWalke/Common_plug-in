@@ -1,0 +1,9 @@
+function dataiframeHeight ()
+{
+    var ifm = document.getElementById ("box");
+    var subWeb = document.frames ? document.frames["dataiframe"].document : ifm.contentDocument;
+    if (ifm != null && subWeb != null)
+    {
+        ifm.height = subWeb.body.scrollHeight;
+    }
+}
